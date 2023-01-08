@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es-MX" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Things to do</title>
+        <link rel="shortcut icon" href="/vite.svg" type="image/x-icon">
+    </head>
+    <body>
+        <div class="container vh-100 d-flex align-items-center">
+            <div class="row w-100 mx-auto justify-content-center">
+                <div class="col-md-4">
+                    <span class="fs-3 fw-lighter border-bottom pb-2 d-block text-center mb-5"><i data-feather="book" class="me-2"></i>Nueva tarea</span>
+                    <div class="form-floating mb-3">
+                        <select class="form-select" id="category" name="category">
+                            <option value="null">Elegir categoría</option>
+                            <option value="spanish">Español</option>
+                            <option value="matematics">Matemáticas</option>
+                        </select>
+                        <label for="category" class="form-label"><i data-feather="list" class="me-2"></i>Categoría</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="title" name="title" placeholder="Título">
+                        <label for="title" class="form-label"><i data-feather="edit-2" class="me-2"></i>Título</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <textarea class="description form-control" id="description" name="description" placeholder="Descripción"></textarea>
+                        <label for="" class="form-label"><i data-feather="message-square" class="me-2"></i>Descripción</label>
+                    </div>
+                    <div class="mt-4">
+                        <span class="btn btn-primary d-block" id="add_task"><i data-feather="plus" class="me-2"></i>Agregar</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <span class="fs-3 fw-lighter border-bottom pb-2 d-block text-center mb-5"><i data-feather="archive" class="me-2"></i>Tareas agregadas</span>
+                    <div class="overflow-scroll" style="height: 300px;">
+                        <div class="alert shadow border" role="alert">
+                            <h4 class="alert-heading">Well done!</h4>
+                            <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+                            <hr>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span>07/01/2022</span>
+                                <span>21:45</span>
+                                <div class="d-inline">
+                                    <span class="btn text-warning" id="edit_task" title="Editar"><i data-feather="edit"></i></span>
+                                    <span class="btn text-danger" id="delete_task" title="Eliminar"><i data-feather="trash-2"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="/src/main.js"></script>
+    </body>
+</html>
